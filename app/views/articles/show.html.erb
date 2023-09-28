@@ -2,3 +2,7 @@
 
 <p><strong>title: <%= @article.title %> </strong> </p>
 <p><strong>description: <%= @article.description %> </strong> </p>
+
+<%= link_to 'All Articles' , articles_path %> 
+<%= link_to 'Edit' , edit_article_path %> 
+<%= button_to 'Delete' , article_path, method: :delete, data: {confrim: 'Are you sure?'} %> 
