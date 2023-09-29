@@ -1,8 +1,15 @@
-<h1>Showing article details</h1>
-
-<p><strong>title: <%= @article.title %> </strong> </p>
-<p><strong>description: <%= @article.description %> </strong> </p>
-
-<%= link_to 'All Articles' , articles_path %> 
-<%= link_to 'Edit' , edit_article_path %> 
-<%= button_to 'Delete' , article_path, method: :delete, data: {confrim: 'Are you sure?'} %> 
+<h1 class= 'text-center m-5'>Showing article details</h1>
+<div class="container text-center shadow p-3 mb-5 bg-body-tertiary rounded  ">
+    <div class="card">
+    <div class="card-header">
+        Featured
+    </div>
+    <div class="card-body ">
+        <h5 class="card-title"> <%= @article.title %> </h5>
+        <p class="card-text"> <%= @article.description %> </p>
+        <%= link_to 'All Articles' , articles_path, class: 'btn btn-success m-2' %> 
+        <%= link_to 'Edit' , edit_article_path, class: 'btn btn-warning m-2'%>
+        <%= button_to 'Delete' , article_path, method: :delete, data: {confrim: 'Are you sure?'}, class: 'btn btn-danger m-2' %> 
+    </div>
+    </div>
+</div>
