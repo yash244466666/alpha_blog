@@ -4,7 +4,7 @@
         <div class="row justify-content-md-center shadow p-3 mb-5 bg-body-tertiary rounded">
             <div class="card text-center">
             <div class="card-header">
-                Article by Yash Solo
+                Article by <%= article.user.username %>
             </div>
             <div class="card-body ">
                 <h5 class="card-title"> <%= link_to article.title, article_path(article), class: "link-success text-decoration-none" %> </h5>
